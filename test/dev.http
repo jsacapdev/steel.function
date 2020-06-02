@@ -1,0 +1,14 @@
+### direct
+
+GET  http://localhost:7071/api/SimpleSampleHttpTrigger HTTP/1.1
+
+###
+
+GET https://stcfgstrrbac.azurewebsites.net/api/simplesamplehttptrigger HTTP/1.1
+x-functions-key: 
+Content-Type: application/json
+
+{
+    "ApplicationInsightsResourceGroup": "test1",
+    "ApplicationInsightsName": "popo"
+}

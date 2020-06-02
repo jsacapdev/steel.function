@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "AppInsightsName": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "resources": [
+    {
+      "name": "[parameters('AppInsightsName')]",
+      "type": "Microsoft.Insights/components",
+      "location": "[resourceGroup().location]",
+      "apiVersion": "2015-05-01",
+      "kind": "web",
+      "dependsOn": [],
+      "tags": {
+        "displayName": "Application Insights"
+      },
+      "properties": {
+        "Application_Type": "web"
+      }
+    }
+  ]
+}
